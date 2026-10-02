@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Garima ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #ff4f87;
+    --dark: #2b1020;
+    --light: #fff0f5;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1b0716, #571b43, #a52f69);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp linear forwards;
+    opacity: .75;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: min(900px, 92%);
+    margin: auto;
+    padding: 45px 0 70px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #ff9ac0;
+    background: #ffffff12;
+    border-radius: 50px;
+    padding: 9px 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ffc6db;
+}
+
+h1 {
+    font-size: clamp(38px, 8vw, 76px);
+    line-height: 1.15;
+    margin: 25px 0 15px;
+}
+
+.script {
+    font-family: 'Dancing Script', cursive;
+    color: #ff9cc2;
+}
+
+.subtitle {
+    color: #f9dce8;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.big-heart {
+    font-size: 85px;
+    display: inline-block;
+    animation: heartbeat 1.3s infinite;
+    filter: drop-shadow(0 0 25px #ff4f87);
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+}
+
+.card {
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(15px);
+    border-radius: 28px;
+    padding: 30px;
+    margin: 25px 0;
+    box-shadow: 0 15px 50px #00000025;
+}
+
+.card h2 {
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+.card p {
+    color: #ffe7f0;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.letter {
+    text-align: left;
+}
+
+.letter p {
+    margin-bottom: 12px;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 27px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .25s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.yes {
+    background: linear-gradient(135deg, #ff76a5, #ff337a);
+    color: white;
+    box-shadow: 0 5px 25px #ff337a55;
+}
+
+.no {
+    background: white;
+    color: #75234c;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    min-height: 65px;
+}
+
+.question {
+    margin: 35px 0;
+}
+
+.question h3 {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.result {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: #ffffff15;
+    border: 1px solid #ff9ac0;
+    border-radius: 22px;
+    animation: appear .6s ease;
+}
+
+.result h2 {
+    color: #ffb6d1;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.divider {
+    color: #ff9cc2;
+    letter-spacing: 8px;
+    margin: 20px 0;
+}
+
+.reason {
+    background: #ffffff0c;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: left;
+    color: #ffe5ef;
+    font-size: 14px;
+}
+
+.reason span {
+    color: #ff9cc2;
+    margin-right: 8px;
+}
+
+footer {
+    color: #e9b9ce;
+    font-size: 12px;
+    margin-top: 45px;
+}
+
+#musicBtn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+    padding: 10px 15px;
+    font-size: 12px;
+    background: #ffffff20;
+    border: 1px solid #ffffff50;
+    color: white;
+}
+
+.small {
+    font-size: 12px !important;
+    opacity: .8;
+    margin-top: 14px;
+}
+
+@media(max-width: 500px) {
+
+    .container {
+        padding-top: 65px;
+    }
+
+    .card {
+        padding: 22px 18px;
+    }
+
+    .card h2 {
+        font-size: 23px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .big-heart {
+        font-size: 70px;
+    }
+
+    button {
+        padding: 13px 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<button id="musicBtn" onclick="toggleMusic()">
+    🎵 Music: OFF
+</button>
+
+<audio id="music" loop>
+    <source
+        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+        type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+    <div class="badge">
+        ✨ A LITTLE SOMETHING FOR YOU ✨
+    </div>
+
+    <h1>
+        Hey, <span class="script">Garima</span> ❤️
+    </h1>
+
+    <p class="subtitle">
+        I made something special for you.<br>
+        Please read this till the end 🥺
+    </p>
+
+    <div style="margin:35px 0">
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <p class="script" style="font-size:32px">
+            I'm really sorry
+        </p>
+
+    </div>
+
+
+    <!-- LETTER -->
+
+    <div class="card letter">
+
+        <h2
+            class="script"
+            style="text-align:center;font-size:36px">
+            A letter for you 💌
+        </h2>
+
+        <p>
+            Hey Garima ❤️
+        </p>
+
+        <p>
+            I know ki sirf sorry bol dene se sab kuch theek nahi
+            ho jata. But I genuinely wanted to tell you what's
+            in my heart.
+        </p>
+
+        <p>
+            I'm sorry for the times I hurt you, for the things
+            I said without thinking, and for the moments when
+            I failed to understand you.
+        </p>
+
+        <p>
+            Kabhi kabhi main apni feelings mein itna kho jata hoon
+            ki yeh samajh hi nahi pata ki meri baaton ka tum par
+            kya effect ho raha hai. And that's something I really
+            want to work on.
+        </p>
+
+        <p>
+            You deserve to be heard, understood and respected.
+            Main nahi chahta ki meri wajah se tumhe kabhi pressure
+            ya sadness feel ho.
+        </p>
+
+        <p>
+            I can't promise that I'll never make a mistake again,
+            but I can promise that I'll try to learn from them
+            and be more thoughtful with my words and actions.
+        </p>
+
+        <p>
+            Tum mere liye special ho, Garima.
+            And I'm genuinely grateful for all the little moments,
+            the conversations, the laughs and the memories we share.
+        </p>
+
+        <p>
+            I'm not asking you to forget everything instantly.
+            I just wanted you to know that my apology is real.
+            Take your time, okay? ❤️
+        </p>
+
+        <p
+            style="text-align:right"
+            class="script">
+
+            Always wishing you happiness,<br>
+            Krishna ❤️
+
+        </p>
+
+    </div>
+
+
+    <!-- REMINDERS -->
+
+    <div class="card">
+
+        <h2>
+            Some little reminders 🌷
+        </h2>
+
+        <div class="reason">
+            <span>♡</span>
+            Your feelings matter to me.
+        </div>
+
+        <div class="reason">
+            <span>♡</span>
+            You don't have to pretend to be okay all the time.
+        </div>
+
+        <div class="reason">
+            <span>♡</span>
+            I want to listen instead of assuming things.
+        </div>
+
+        <div class="reason">
+            <span>♡</span>
+            I respect your space and your decisions.
+        </div>
+
+        <div class="reason">
+            <span>♡</span>
+            You deserve kindness, patience and happiness.
+        </div>
+
+        <div class="reason">
+            <span>♡</span>
+            I'm sorry, not just for what happened,
+            but for how it made you feel.
+        </div>
+
+    </div>
+
+
+    <div class="divider">
+        ♡ ♡ ♡
+    </div>
+
+
+    <!-- QUESTIONS -->
+
+    <div class="card">
+
+        <h2
+            class="script"
+            style="font-size:38px">
+
+            Can I ask you something? 🥺
+
+        </h2>
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="question">
+
+            <h3>
+                1. Will you read my apology with an open heart? 💌
+            </h3>
+
+            <div class="buttons">
+
+                <button
+                    class="yes"
+                    onclick="answer(this,1)">
+
+                    Yes ❤️
+
+                </button>
+
+                <button
+                    class="no"
+                    onmouseover="runAway(this)"
+                    onclick="runAway(this)">
+
+                    No 🙈
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question">
+
+            <h3>
+                2. Can we talk when you're comfortable? 🫶
+            </h3>
+
+            <div class="buttons">
+
+                <button
+                    class="yes"
+                    onclick="answer(this,2)">
+
+                    Yes 💗
+
+                </button>
+
+                <button
+                    class="no"
+                    onmouseover="runAway(this)"
+                    onclick="runAway(this)">
+
+                    No 🙈
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question">
+
+            <h3>
+                3. Will you give yourself all the time you need? 🌸
+            </h3>
+
+            <div class="buttons">
+
+                <button
+                    class="yes"
+                    onclick="answer(this,3)">
+
+                    Yes ✨
+
+                </button>
+
+                <button
+                    class="no"
+                    onmouseover="runAway(this)"
+                    onclick="runAway(this)">
+
+                    No 🙈
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="question">
+
+            <h3>
+                4. Can we make some happier memories together? 🥹
+            </h3>
+
+            <div class="buttons">
+
+                <button
+                    class="yes"
+                    onclick="answer(this,4)">
+
+                    Yes 🩷
+
+                </button>
+
+                <button
+                    class="no"
+                    onmouseover="runAway(this)"
+                    onclick="runAway(this)">
+
+                    No 🙈
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 5 -->
+
+        <div class="question">
+
+            <h3>
+                5. Can you forgive me, whenever you're ready? ❤️
+            </h3>
+
+            <div class="buttons">
+
+                <button
+                    class="yes"
+                    onclick="answer(this,5)">
+
+                    Yes, Krishna ❤️
+
+                </button>
+
+                <button
+                    class="no"
+                    onmouseover="runAway(this)"
+                    onclick="runAway(this)">
+
+                    No 🙈
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <p class="small">
+            No rush, Garima. Your honest answer matters. 💗
+        </p>
+
+
+        <!-- FINAL MESSAGE -->
+
+        <div
+            class="result"
+            id="result">
+
+            <h2
+                class="script"
+                style="font-size:36px">
+
+                Thank you, Garima! ❤️
+
+            </h2>
+
+            <p style="margin:15px 0">
+
+                You have no idea how much this means to me.
+                I'll keep trying to be more understanding,
+                patient and thoughtful.
+
+            </p>
+
+            <div
+                class="big-heart"
+                style="font-size:55px">
+
+                🫶
+
+            </div>
+
+            <p
+                class="script"
+                style="font-size:30px">
+
+                You deserve all the happiness in the world.
+
+            </p>
+
+        </div>
+
+
+        <!-- TIME OPTION -->
+
+        <div
+            id="honest"
+            style="margin-top:20px">
+
+            <button
+                class="no"
+                onclick="showHonest()">
+
+                I need some time 💗
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="result"
+            id="honestResult">
+
+            <h2>
+                That's completely okay 💗
+            </h2>
+
+            <p>
+
+                Take all the time you need, Garima.
+                You don't have to answer anything right now.
+                I'll respect your feelings and your space.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- LAST MESSAGE -->
+
+    <div class="card">
+
+        <h2
+            class="script"
+            style="font-size:35px">
+
+            One last thing 🌙
+
+        </h2>
+
+        <p>
+
+            No website, no words and no grand gesture can replace
+            genuine effort. I hope my actions show you what
+            this little letter is trying to say.
+
+        </p>
+
+        <p
+            style="margin-top:20px"
+            class="script">
+
+            I'm sorry, Garima. Take care of yourself. ❤️
+
+        </p>
+
+    </div>
+
+
+    <footer>
+
+        MADE WITH LOVE & A LITTLE COURAGE<br>
+
+        FOR GARIMA ❤️ — FROM KRISHNA
+
+        <br><br>
+
+        © A little corner of the internet, just for you
+
+    </footer>
+
+</div>
+
+
+<script>
+
+/* FLOATING HEARTS */
+
+const heartBox =
+    document.getElementById("hearts");
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    const symbols = [
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "✨",
+        "🌸"
+    ];
+
+    heart.textContent =
+        symbols[
+            Math.floor(
+                Math.random() * symbols.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 7) + "s";
+
+    heartBox.appendChild(heart);
+
+    setTimeout(
+        () => heart.remove(),
+        12000
+    );
+}
+
+setInterval(
+    createHeart,
+    450
+);
+
+
+/* NO BUTTON */
+
+function runAway(button) {
+
+    const parent =
+        button.parentElement;
+
+    const maxX =
+        Math.max(
+            0,
+            parent.clientWidth -
+            button.offsetWidth
+        );
+
+    const maxY = 100;
+
+    button.style.position =
+        "relative";
+
+    button.style.left =
+        (
+            Math.random() * maxX -
+            maxX / 2
+        ) + "px";
+
+    button.style.top =
+        (
+            Math.random() * maxY -
+            maxY / 2
+        ) + "px";
+}
+
+
+/* YES BUTTONS */
+
+let answered =
+    new Set();
+
+function answer(button, number) {
+
+    answered.add(number);
+
+    button.textContent =
+        "Yes! ❤️";
+
+    button.style.transform =
+        "scale(1.08)";
+
+    button.style.background =
+        "linear-gradient(135deg,#ff9ac0,#ff337a)";
+
+
+    if (answered.size === 5) {
+
+        document
+            .getElementById("result")
+            .style.display = "block";
+
+        document
+            .getElementById("result")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+
+        for (
+            let i = 0;
+            i < 25;
+            i++
+        ) {
+
+            setTimeout(
+                createHeart,
+                i * 100
+            );
+
+        }
+
+    }
+
+}
+
+
+/* TIME OPTION */
+
+function showHonest() {
+
+    document
+        .getElementById("honestResult")
+        .style.display = "block";
+
+    document
+        .getElementById("honestResult")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+}
+
+
+/* MUSIC */
+
+let playing = false;
+
+function toggleMusic() {
+
+    const music =
+        document.getElementById("music");
+
+    const button =
+        document.getElementById("musicBtn");
+
+
+    if (!playing) {
+
+        music.play()
+        .then(() => {
+
+            playing = true;
+
+            button.textContent =
+                "🎵 Music: ON";
+
+        })
+        .catch(() => {
+
+            button.textContent =
+                "Tap to play 🎵";
+
+        });
+
+    }
+
+    else {
+
+        music.pause();
+
+        playing = false;
+
+        button.textContent =
+            "🎵 Music: OFF";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
